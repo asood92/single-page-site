@@ -13,6 +13,8 @@
                     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
                     "Helvetica Neue", sans-serif;
                 font-size: medium;
+                text-shadow: 2px 2px 2px #000000;
+                color: #ffffff;
                 margin: 0;
             }
 
@@ -33,29 +35,194 @@
 			The id names are unique so styles here apply just
 			the section they name. */
             #nav {
-                background-color: #ff3b30;
+                background-color: lightpink;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 1em;
+                display: flex;
             }
 
-            #banner {
-                background-color: #26b63e;
+            nav h1, ul {
+                margin: 0;
             }
 
-            #topic-1 {
-                background-color: #007aff;
+            nav a {
+                text-decoration: none;
+                color: darkmagenta;
+                text-shadow: none;
+                font-size: 1.25em;
             }
 
-            #topic-2 {
-                background-color: #5856d6;
+            nav ul {
+                display: flex;
+                list-style: none;
             }
 
-            #topic-3 {
-                background-color: #ff00be;
+            nav ul a {
+                padding: 2em;
+            }
+
+            #suffragettes {
+                background-color:snow;
+                background-image: url(images/wide1.jpg);
+                background-size: cover;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+            }
+            #suffragettes p {
+				font-size: 3em;
+                max-width: 50ch;
+                position: relative;
+                    top: -35vh;
+                text-align: center
+            }
+
+            #overview {
+                background-color:salmon;
+            }
+            #overview ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            #overview > h2 {
+                margin: 1em;
+                font-size: 3em;
+                text-align: center;
+            }
+
+            .card {
+                width: 600px;
+                height: 50vh;
+                margin: 1em;
+                background-color: rgb(41, 22, 70);
+                box-shadow: 0 0 22px rgba(0, 0, 0, 0.44);
+            }
+
+            .card h3 {
+                font-size: 1.5em;
+            }
+
+            .card h3, .card p {
+                margin: 1rem;
+            }
+
+            #susan-b-anthony {
+                background-image: url(images/sbawide.jpg);
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: violet;
+
+            }
+
+            #susan-b-anthony > div {
+                padding: 3em;
+                width: 75%;
+                max-width: 900px;
+                position: relative;
+                    top: -20vh;
+                background-color: rgba(200, 255, 255, 0.6);
+            }
+            #susan-b-anthony h2 {
+                font-size: 3em;
+            }
+            #susan-b-anthony p {
+                font-size: 2em;
+            }
+
+            #elizabeth-cady-stanton {
+                background-color: rgba(152, 230, 142, 0.562);
+                display: flex;
+                background-image: url(images/texture.jpg);
+                background-size: cover;
+            }
+
+            #elizabeth-cady-stanton > div {
+                display: flex;
+                justify-content: center;
+                width: 75%;
+                margin: auto;
+            }
+
+            #elizabeth-cady-stanton h2, p {
+                margin: 0 0 1rem 0;
+            }
+
+            #elizabeth-cady-stanton h2 {
+                font-size: 3em;
+            }
+
+            #elizabeth-cady-stanton > div > div:nth-child(1) {
+                flex: 3;
+                margin: 0 2em 0 0;
+            }
+
+            #elizabeth-cady-stanton > div img {
+            width: 100%;
             }
 
             #contact {
-                background-color: #ff9500;
+                background-color: rgb(57, 47, 85);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #contact > form {
+                display: flex;
+            }
+
+            #contact > form > div {
+                display: flex;
+                flex-direction: column;
+            }
+
+			#contact label {
+				display: flex;
+				flex-direction: column;
+			}
+
+			label {
+				margin: 1em 0;
+			}
+
+			label span {
+				margin: 1em 0;
+			}
+
+			input, textarea {
+				border: 1px solid #000;
+				padding: 0.5em;
+				margin: 0 2em 0 0;
+				width: 20em;
+				font-size: 1em;
+			}
+
+			textarea {
+				height: 9em;
+				margin: 0 0 0 0;
+			}
+
+			form button {
+				width: auto;
+				font-size: 1em;
+				margin: 1em 0;
+				align-self: flex-end;
+				padding: 0.5em 1em;
+				background-color:rgb(0, 0, 0);
+                color: #ffffff;
+				border: none;
             }
         </style>
+
     </head>
     <body>
         <main>
@@ -68,53 +235,69 @@
                 </ul>
             </nav>
 
-            <section id="Suffragettes">
-                <p>In the latter half of the 1800's, women in the USA began transitioning out of being expected to stay at home, and in finding social engagements outside of the home, they began to fight for the right to vote - among other issues.  </p>
+            <section id="suffragettes">
+                    <p>In the latter half of the 1800's, women in the USA began rebelling against the societal notion that women's lives revolve around the home. Women began to leave the home more often and socialize, and with that came a desire to have equal rights.</p>
             </section>
 
+            <section id="overview">
+                <h2>Goals of the Movement</h2>
+                <ul>
+                    <li class="card">
+                        <img src="images/vote.jpg">
+                        <h3>Right to Vote</h3>
+                        <p>Gaining the right to vote, or "suffrage" was paramount.</p>
+                    <li class="card">
+                        <img src="images/feminisim.jpg">
+                        <h3>Growth of Feminism</h3>
+                        <p>At a time when women were expected to be at home, women challenged the norm and fought to be able to be more independent and in control of their own lives.</p>
+                    <li class="card">
+                        <img src="images/work.jpg">
+                        <h3>Right to Work</h3>
+                        <p>Women wanted to be able to work outside the home, and the number of women in the workforce boomed towards the end of the 19th century.</p>
+                </section>
+
             <section id="susan-b-anthony">
-                <h2>Susan B. Anthony</h2>
-                <figure>
-                    <img src="sba.jpg" alt="Susan B Anthony Photo"> Photo of Susan B. Anthony </img>
-                </figure>
-                <p>Susan B. Anthony was the best-known women's suffrage proponent of her time, and her fame led to her image gracing a U.S. dollar coin in the late 20th century. She wasn't involved in the 1848 Seneca Falls Women's Rights Convention that first proposed the idea of suffrage as a goal for the women's rights movement, but she joined soon after. Anthony's most prominent roles were as a speaker and strategist.
+                <div>
+                    <h2>Susan B. Anthony</h2>
+                    <p>Susan B. Anthony was the best-known women's suffrage proponent of her time, and her fame led to her image gracing a U.S. dollar coin in the late 20th century. She wasn't involved in the 1848 Seneca Falls Women's Rights Convention that first proposed the idea of suffrage as a goal for the women's rights movement, but she joined soon after. Anthony's most prominent roles were as a speaker and strategist.
+                    </div>
             </section>
 
             <section id="elizabeth-cady-stanton">
-                <h2>Elizabeth Cady Stanton</h2>
-                <figure>
-                    <img src="ecs.jpg" alt="Elizabeth Cady Stanton Photo"> Photo of Elizabeth Cady Stanton </img>
-                </figure>
-                <p> Elizabeth Cady Stanton worked closely with Anthony, lending her skills as a writer and theorist. Stanton was married, with two daughters and five sons, which limited the time she could spend traveling and speaking. She and Lucretia Mott were responsible for calling the 1848 Seneca Falls convention, and she was the primary writer of the convention's Declaration of Sentiments. Late in life, Stanton stirred up controversy by being part of the team that wrote "The Woman's Bible," an early women's rights supplement to the King James Bible. </p>
+                <div>
+                    <div>
+                        <h2>Elizabeth Cady Stanton</h2>
+                        <p> Elizabeth Cady Stanton worked closely with Anthony, lending her skills as a writer and theorist. Stanton was married, with two daughters and five sons, which limited the time she could spend traveling and speaking. She and Lucretia Mott were responsible for calling the 1848 Seneca Falls convention, and she was the primary writer of the convention's Declaration of Sentiments. Late in life, Stanton stirred up controversy by being part of the team that wrote "The Woman's Bible," an early women's rights supplement to the King James Bible. </p>
+                    </div>
+                    <div>
+                        <img src="images/ecs.jpg" alt="Elizabeth Cady Stanton Photo">
+                    </div>
+                </div>
             </section>
 
-            <section id="alice-paul">
-                <h2>Alice Paul</h2>
-                <figure>
-                    <img src="ap.jpg" alt="Alice Paul Photo">Photo of Alice Paul</img>
-                <p>Alice Paul became active in the women's suffrage movement in the 20th century. Born well after Stanton and Anthony, Paul visited England and brought back a more radical, confrontational approach to winning the vote. After women succeeded in 1920, Paul proposed an Equal Rights Amendment to the U.S. Constitution. </p>
-            </section>
+			<footer id="contact">
+				<h2>Contact Us</h2>
+				<form>
+					<div>
+						<label>
+							<span>Name</span>
+							<input type="text">
+						</label>
 
-            <footer id="contact">
-                <form>
-                    <label>
-                        Name
-                        <input type="text" />
-                    </label>
-
-                    <label>
-                        Email
-                        <input type="email" />
-                    </label>
-
-                    <label>
-                        Message
-                        <textarea></textarea>
-                    </label>
-
-                    <button type="submit">Send</button>
-                </form>
-            </footer>
+						<label>
+							<span>Email</span>
+							<input type="email">
+						</label>
+					</div>
+					<div>
+						<label>
+							<span>Message</span>
+							<textarea></textarea>
+						</label>
+						<button type="submit">Send</button>
+					</div>
+				</form>
+			</footer>
         </main>
     </body>
 </html>
